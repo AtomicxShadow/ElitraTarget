@@ -2,8 +2,9 @@
 minecraft = "1.21.11"
 yarn-mappings = "1.21.11+build.1"
 fabric-loader = "0.16.9"
+fabric-api = "0.107.0+1.21.1"   # gerekirse güncelle
 
-meteor = "0.5.11-SNAPSHOT"  # En güncel snapshot için meteorclient.com'dan bak, genelde bu çalışır
+meteor = "0.5.11-SNAPSHOT"      # veya en son snapshot, meteorclient.com'dan bak
 meteor-repo = "https://meteorclient.com/maven"
 
 loom = "1.8-SNAPSHOT"
@@ -12,11 +13,9 @@ loom = "1.8-SNAPSHOT"
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 yarn-mappings = { module = "net.fabricmc:yarn", version.ref = "yarn-mappings" }
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 
 meteor-client = { module = "meteordevelopment:meteor-client", version.ref = "meteor" }
 
-[libraries.bundles]
+[bundles]
 minecraft = ["minecraft", "yarn-mappings", "fabric-loader"]
-
-[plugins]
-fabric-loom = { id = "fabric-loom", version.ref = "loom" }
